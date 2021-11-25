@@ -1,5 +1,45 @@
 # 안진홍 201840121
 
+## [ 11월 24일 학습내용 ]
+>오늘 배운 내용 정리
+
+### creat-react-app으로, Remarkable 사용하기
+
+      • creat-react-app으로 markdown-editor 프로젝트를 생성한다.
+      • 정상 동작을 확인하다.
+      • App.js에 있는 필요없는 코드를 삭제한다.
+      • App.js에 문서의 코드를 복사해 넣는다.
+      • component의 이름을 App으로 수정한다.
+      • rendering은 index.js에 위임한다.
+      • Remarkable을 설치한다.
+      • React와 Remarkable을 import한다.
+      • 동작이 되는지 확인한다.
+
+### code review
+
+      • 외부 컴포넌트를 사용하기 위해 생성자 내에 객체를 생성한다.
+      • state를 이용하여 Remarkable에 변환할 마크다운 문장을 제출한다.
+      • 글이 입력되면 handleChange 이벤트를 사용하여 state의 value를 갱신한다.
+      • getRawMarkup() 메소드를 통해 html을 반환 받는다.
+
+
+## react 배우기
+- https://ko.reactjs.org/docs/getting-started.html#learn-react 참고
+
+### react 주요개념
+
+1. Hello World
+      - 가장 단순한 react
+2. JSX
+      - https://ko.reactjs.org/docs/introducing-jsx.html 참고
+3. 엘리먼트 렌더링
+      - 엘리먼트는 React 앱의 가장 작은 단위.
+      - https://ko.reactjs.org/docs/rendering-elements.html 참고
+4. Components와 Props
+      - 개념적으로 컴포넌트는 JavaScript 함수와 유사함.
+      - “props”라고 하는 임의의 입력을 받은 후, 화면에 어떻게 표시되는지를 기술하는 React 엘리먼트를 반환
+      - https://ko.reactjs.org/docs/components-and-props.html 참고
+
 ## [ 11월 17일 학습내용 ]
 >오늘 배운 내용 정리
 
