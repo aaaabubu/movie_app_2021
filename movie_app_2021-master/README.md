@@ -1,5 +1,67 @@
 # 안진홍 201840121
 
+## [ 12월 01일 학습내용 ]
+>오늘 배운 내용 정리
+
+## State와 생명주기
+### 함수에서 클래스로 변환하기
+다섯 단계로 Clock과 같은 함수 컴포넌트를 클래스로 변환 가능.
+
+      1. React.Component를 확장하는 동일한 이름의 ES6 class를 생성.
+      2. render()라고 불리는 빈 메서드를 추가.
+      3. 함수의 내용을 render() 메서드 안으로 옮김.
+      4. render() 내용 안에 있는 props를 this.props로 변경.
+      5. 남아있는 빈 함수 선언을 삭제.
+      
+### 클래스에 로컬 State 추가하기
+세 단계에 걸쳐서 date를 props에서 state로 이동가능.
+
+ 1. render() 메서드 안에 있는 this.props.date를 this.state.date로 변경.
+      ```jsx
+      class Clock extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Hello, world!</h1>
+              <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+          );
+        }
+      }
+      ```
+ 2. 초기 this.state를 지정하는 class constructor를 추가.
+      ```jsx
+      class Clock extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {date: new Date()};
+        }
+
+        render() {
+          return (
+            <div>
+              <h1>Hello, world!</h1>
+              <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+            </div>
+          );
+        }
+      }
+      ```
+3. <Clock /> 요소에서 date prop을 삭제.
+      
+      ```jsx
+      ReactDOM.render(
+        <Clock />,
+        document.getElementById('root')
+      );
+      ```
+## 이벤트 처리하기
+<b>React 엘리먼트에서 이벤트를 처리하는 방식은 DOM 엘리먼트에서 이벤트를 처리하는 방식과 매우 유사합니다. 몇 가지 문법 차이는 다음과 같습니다.</b>
+
+      • React의 이벤트는 소문자 대신 캐멀 케이스(camelCase)를 사용.
+      • JSX를 사용하여 문자열이 아닌 함수로 이벤트 핸들러를 전달.
+      
+
 ## [ 11월 24일 학습내용 ]
 >오늘 배운 내용 정리
 
